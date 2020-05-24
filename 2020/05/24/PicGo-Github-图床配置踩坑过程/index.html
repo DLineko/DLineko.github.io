@@ -198,6 +198,11 @@
                   <div class="reward-box">
                     
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
                   </div>
                 </span>
               </span>
@@ -307,25 +312,43 @@
 
 
   
+
   
+
   
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+
+  
+
+  
+
+
+
+    
+        <section id="comments" class="comments">
+            <style>
+                .comments{margin:30px;padding:10px;background:#fff}
+                @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-  var cloudTieConfig = {
-    url: "http://yoursite.com/2020/05/24/PicGo-Github-%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%BF%87%E7%A8%8B/", 
-    sourceId: "PicGo-Github-图床配置踩坑过程",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "ERMDKIiEyovJ1GonNEWUDdS6-gzGzoHsz",
+        app_key: "tW1js3s5U89xa0bIMlf2fHnS",
+        placeholder: "Just go go",
+        avatar: "mm",
+    });
 </script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-  
 
-  
-
-  
-
-  
+        </section>
+    
 
 
           </div>
