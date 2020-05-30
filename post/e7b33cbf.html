@@ -15,19 +15,19 @@
 <meta property="og:site_name" content="Yang&#39;s BLOG">
 <meta property="og:description" content="PicGo: 用于快速上传图片并获取图片URL链接的工具，支持拖拽图片上传，简单易用，配合github做图床可以获取url，可作为markdown的图片路径。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/post/undefined/picgo-config.jpg">
-<meta property="og:image" content="http://yoursite.com/post/undefined/issue.jpg">
-<meta property="og:image" content="http://yoursite.com/post/undefined/issue2.jpg">
-<meta property="og:image" content="http://yoursite.com/post/undefined/never-used.png">
-<meta property="og:image" content="http://yoursite.com/post/undefined/picgo-upload.jpg">
-<meta property="og:image" content="http://yoursite.com/post/undefined/last.jpg">
+<meta property="og:image" content="http://yoursite.com/post/e7b33cbf/picgo-config.jpg">
+<meta property="og:image" content="http://yoursite.com/post/e7b33cbf/issue.jpg">
+<meta property="og:image" content="http://yoursite.com/post/e7b33cbf/issue2.jpg">
+<meta property="og:image" content="http://yoursite.com/post/e7b33cbf/never-used.png">
+<meta property="og:image" content="http://yoursite.com/post/e7b33cbf/picgo-upload.jpg">
+<meta property="og:image" content="http://yoursite.com/post/e7b33cbf/last.jpg">
 <meta property="article:published_time" content="2020-05-24T14:06:18.000Z">
-<meta property="article:modified_time" content="2020-05-29T16:38:43.450Z">
+<meta property="article:modified_time" content="2020-05-30T07:20:21.671Z">
 <meta property="article:author" content="machiko">
 <meta property="article:tag" content="github图床">
 <meta property="article:tag" content="遇坑记录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/post/undefined/picgo-config.jpg">
+<meta name="twitter:image" content="http://yoursite.com/post/e7b33cbf/picgo-config.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s BLOG" type="application/atom+xml">
   
@@ -189,11 +189,11 @@
 <a id="more"></a>
 <h2 id="Github图床"><a href="#Github图床" class="headerlink" title="Github图床"></a>Github图床</h2><p>1.安装了Node.js,版本大于8<br>2.拥有一个github账号，创建一个<strong>公有仓库</strong><br>3.访问<a href="https://github.com/settings/tokens，" target="_blank" rel="noopener">https://github.com/settings/tokens，</a> 点击<code>Generate new token</code>，勾选repo，生成一个token<br>4.配置picgo，仓库名必须为<code>用户名/仓库</code></p>
 <p>下图为官网配置的截图</p>
-<img src="/post/undefined/picgo-config.jpg" class="" title="官网配置">
+<img src="/post/e7b33cbf/picgo-config.jpg" class="" title="官网配置">
 
-<h3 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h3><p>&emsp;&emsp;使用PicGo上传图片的时候，总是显示红色进度条，但是和官网比照了好几遍配置，又没发现什么错误，可是就是上传不了。于是谷歌搜了一下遇坑同盟，跟着她们的解决方法解决了一遍。<br>  &emsp;&emsp;1.<a href="https://blog.csdn.net/weixin_42932905/article/details/106268022?fps=1&locationNum=2?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">先关闭sever再重启</a><br>  &emsp;&emsp;2.<a href="https://blog.csdn.net/liuergo/article/details/102630912" target="_blank" rel="noopener">校准电脑时钟</a><br>  &emsp;&emsp;3.<a href="https://blog.csdn.net/twodogbanana/article/details/95609760" target="_blank" rel="noopener">文件名里不能有 ‘+’ 号</a><br>  &emsp;&emsp;结果还是不行。打开了PicGo设置 - 设置日志文件 - 点击设置，想看看日志文件究竟是什么问题。因为我尝试上传了很多遍，所以报错原因有两个。<br>  &emsp;&emsp;①[PicGo ERROR] RequestError: Error: read ECONNRESET<br>  &emsp;&emsp;②[PicGo ERROR] StatusCodeError: 404 - {“message”:”Not  Found”,”documentation_url”:”<a href="https://developer.github.com/v3/repos/contents/#create-or-update-a-file&quot;}" target="_blank" rel="noopener">https://developer.github.com/v3/repos/contents/#create-or-update-a-file&quot;}</a><br>  &emsp;&emsp;感觉离胜利更近了一步！打开了picgo的github issue继续寻找同盟。在同个报错下看到开发者了接近崩溃的呐喊<br>   <img src="/post/undefined/issue.jpg" class=""><br>   <img src="/post/undefined/issue2.jpg" class=""><br>  惭愧的我又看了一遍官网，逛了一遍faq，可是依旧发现自己是按着正确步骤的。于是我改了仓库名字，因为一开始名字是和PicGo同名，以为是同名造成的bug，结果还是不行。十分烦躁的情况下做最后一次尝试，重新配置了token，才发现之前的token一直是never used的状态。</p>
-<img src="/post/undefined/never-used.png" class="">
-<p>希望渺小的情况下上传了图片，成功了！！所以应该就是token哪里出了问题吧<br>  <img src="/post/undefined/picgo-upload.jpg" class=""><br>  <center><img src="/post/undefined/last.jpg" class=""></center></p>
+<h3 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h3><p>&emsp;&emsp;使用PicGo上传图片的时候，总是显示红色进度条，但是和官网比照了好几遍配置，又没发现什么错误，可是就是上传不了。于是谷歌搜了一下遇坑同盟，跟着她们的解决方法解决了一遍。<br>  &emsp;&emsp;1.<a href="https://blog.csdn.net/weixin_42932905/article/details/106268022?fps=1&locationNum=2?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">先关闭sever再重启</a><br>  &emsp;&emsp;2.<a href="https://blog.csdn.net/liuergo/article/details/102630912" target="_blank" rel="noopener">校准电脑时钟</a><br>  &emsp;&emsp;3.<a href="https://blog.csdn.net/twodogbanana/article/details/95609760" target="_blank" rel="noopener">文件名里不能有 ‘+’ 号</a><br>  &emsp;&emsp;结果还是不行。打开了PicGo设置 - 设置日志文件 - 点击设置，想看看日志文件究竟是什么问题。因为我尝试上传了很多遍，所以报错原因有两个。<br>  &emsp;&emsp;①[PicGo ERROR] RequestError: Error: read ECONNRESET<br>  &emsp;&emsp;②[PicGo ERROR] StatusCodeError: 404 - {“message”:”Not  Found”,”documentation_url”:”<a href="https://developer.github.com/v3/repos/contents/#create-or-update-a-file&quot;}" target="_blank" rel="noopener">https://developer.github.com/v3/repos/contents/#create-or-update-a-file&quot;}</a><br>  &emsp;&emsp;感觉离胜利更近了一步！打开了picgo的github issue继续寻找同盟。在同个报错下看到开发者了接近崩溃的呐喊<br>   <img src="/post/e7b33cbf/issue.jpg" class=""><br>   <img src="/post/e7b33cbf/issue2.jpg" class=""><br>  惭愧的我又看了一遍官网，逛了一遍faq，可是依旧发现自己是按着正确步骤的。于是我改了仓库名字，因为一开始名字是和PicGo同名，以为是同名造成的bug，结果还是不行。十分烦躁的情况下做最后一次尝试，重新配置了token，才发现之前的token一直是never used的状态。</p>
+<img src="/post/e7b33cbf/never-used.png" class="">
+<p>希望渺小的情况下上传了图片，成功了！！所以应该就是token哪里出了问题吧<br>  <img src="/post/e7b33cbf/picgo-upload.jpg" class=""><br>  <center><img src="/post/e7b33cbf/last.jpg" class=""></center></p>
 
       
 
