@@ -44,6 +44,25 @@
     </script>
 
 
+  <!--百度自动推送-->
+  
+    <!-- 开启百度站长平台自动推送https://ziyuan.baidu.com/linksubmit/index，
+    https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title19-->
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+
   <script data-ad-client="ca-pub-4411114757215060" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
@@ -173,8 +192,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h1><p>在访问对象前添加一层拦截，过滤很多操作。<br><strong>属性</strong></p>
-<blockquote>
+        <h1 id="1-Proxy"><a href="#1-Proxy" class="headerlink" title="1.Proxy"></a>1.Proxy</h1><p>在访问对象前添加一层拦截，过滤很多操作。 </p>
+<h3 id="1-1属性"><a href="#1-1属性" class="headerlink" title="1.1属性"></a>1.1属性</h3><blockquote>
 <p>handler 其属性是操作对应的自定义代理函数<br>target 目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）</p>
 </blockquote>
         
@@ -189,14 +208,6 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">proxy</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">reflect</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
@@ -403,27 +414,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">github图床</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">遇坑记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">proxy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">reflect</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Vue源码衍生</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">github图床</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">遇坑记录</a>
               </li>
             
             <div class="clearfix"></div>
