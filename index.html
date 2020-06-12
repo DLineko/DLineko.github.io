@@ -172,6 +172,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-算法题：二叉树B是否是二叉树A的子结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/post/cc245d1.html">算法题：二叉树B是否是二叉树A的子结构</a>
+    </h1>
+  
+
+        
+        <a href="/post/cc245d1.html" class="archive-article-date">
+  	<time datetime="2020-06-12T13:54:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）</p>
+<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>（1）先在A中找和B的根节点相同的结点<br>（2）找到之后遍历对应位置的其他结点，直到B中结点遍历完，都相同时，则B是A的子树<br>（3）对应位置的结点不相同时，退出继续在A中寻找和B的根节点相同的结点，重复步骤，直到有任何一棵二叉树为空退出<br><img src="https://raw.githubusercontent.com/DLineko/myPicGo/master/20200612000640.png" alt=""></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* function TreeNode(x) &#123;</span></span><br><span class="line"><span class="comment">    this.val = x;</span></span><br><span class="line"><span class="comment">    this.left = null;</span></span><br><span class="line"><span class="comment">    this.right = null;</span></span><br><span class="line"><span class="comment">&#125; */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">HasSubtree</span>(<span class="params">root1,root2</span>) </span>&#123;</span><br><span class="line">  &#123;    </span><br><span class="line">    <span class="keyword">if</span>(root1 === <span class="literal">null</span> || root2 ===<span class="literal">null</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> isSubTree(root1, root2) || HasSubtree(root1.left, root2) || HasSubtree(root1.right, root2);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isSubTree</span>(<span class="params">root1,root2</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(root2 === <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">  <span class="keyword">if</span>(root1 === <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  <span class="keyword">if</span> (root1.val!=root2.val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> isSubTree(root1.left,root2.left) &amp;&amp;</span><br><span class="line">isSubTree(root1.right, root2.right)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">算法题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/post/cc245d1.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
     <article id="post-Vue源码系列一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -192,9 +270,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Vue的初始化"><a href="#Vue的初始化" class="headerlink" title="Vue的初始化"></a>Vue的初始化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/core/instance/init.js</span></span><br><span class="line">Vue.prototype._init = <span class="function"><span class="keyword">function</span> (<span class="params">options?: Object</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> vm: Component = <span class="keyword">this</span></span><br><span class="line">    <span class="comment">// a uid</span></span><br><span class="line">    vm._uid = uid++</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> startTag, endTag</span><br><span class="line">    <span class="comment">/* istanbul ignore if */</span></span><br><span class="line">    <span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span> &amp;&amp; config.performance &amp;&amp; mark) &#123;</span><br><span class="line">      startTag = <span class="string">`vue-perf-init:<span class="subst">$&#123;vm._uid&#125;</span>`</span></span><br><span class="line">      endTag = <span class="string">`vue-perf-end:<span class="subst">$&#123;vm._uid&#125;</span>`</span></span><br><span class="line">      mark(startTag)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// a flag to avoid this being observed</span></span><br><span class="line">    <span class="comment">/*一个防止vm实例自身被观察的标志位*/</span></span><br><span class="line">    vm._isVue = <span class="literal">true</span></span><br><span class="line">    <span class="comment">// merge options</span></span><br><span class="line">    <span class="keyword">if</span> (options &amp;&amp; options._isComponent) &#123;</span><br><span class="line">      <span class="comment">// optimize internal component instantiation</span></span><br><span class="line">      <span class="comment">// since dynamic options merging is pretty slow, and none of the</span></span><br><span class="line">      <span class="comment">// internal component options needs special treatment.</span></span><br><span class="line">      initInternalComponent(vm, options)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      vm.$options = mergeOptions(</span><br><span class="line">        resolveConstructorOptions(vm.constructor),</span><br><span class="line">        options || &#123;&#125;,</span><br><span class="line">        vm</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* istanbul ignore else */</span></span><br><span class="line">    <span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span>) &#123;</span><br><span class="line">      initProxy(vm)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      vm._renderProxy = vm</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// expose real self</span></span><br><span class="line">    vm._self = vm</span><br><span class="line">    <span class="comment">/*初始化生命周期*/</span></span><br><span class="line">    initLifecycle(vm)</span><br><span class="line">    <span class="comment">/*初始化事件*/</span></span><br><span class="line">    initEvents(vm)</span><br><span class="line">    <span class="comment">/*初始化render*/</span></span><br><span class="line">    initRender(vm)</span><br><span class="line">    <span class="comment">/*调用beforeCreate钩子函数并且触发beforeCreate钩子事件*/</span></span><br><span class="line">    callHook(vm, <span class="string">'beforeCreate'</span>)</span><br><span class="line">    initInjections(vm) <span class="comment">// resolve injections before data/props</span></span><br><span class="line">    <span class="comment">/*初始化props、methods、data、computed与watch*/</span></span><br><span class="line">    initState(vm)</span><br><span class="line">    initProvide(vm) <span class="comment">// resolve provide after data/props</span></span><br><span class="line">    <span class="comment">/*调用created钩子函数并且触发created钩子事件*/</span></span><br><span class="line">    callHook(vm, <span class="string">'created'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* istanbul ignore if */</span></span><br><span class="line">    <span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span> &amp;&amp; config.performance &amp;&amp; mark) &#123;</span><br><span class="line">      <span class="comment">/*格式化组件名*/</span></span><br><span class="line">      vm._name = formatComponentName(vm, <span class="literal">false</span>)</span><br><span class="line">      mark(endTag)</span><br><span class="line">      measure(<span class="string">`<span class="subst">$&#123;vm._name&#125;</span> init`</span>, startTag, endTag)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (vm.$options.el) &#123;</span><br><span class="line">      <span class="comment">/*挂载组件*/</span></span><br><span class="line">      vm.$mount(vm.$options.el)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>Vue 初始化主要就干了几件事情，合并配置，初始化生命周期，初始化事件中心，初始化渲染，初始化 data、props、computed、watcher 等等。</p>
-
+        <h3 id="Vue的初始化"><a href="#Vue的初始化" class="headerlink" title="Vue的初始化"></a>Vue的初始化</h3><p>Vue 初始化主要就干了几件事情，合并配置，初始化生命周期，初始化事件中心，初始化渲染，初始化 data、props、computed、watcher 等等。</p>
+        
       
 
       
@@ -520,6 +597,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Vue源码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">算法题</a>
               </li>
             
             <div class="clearfix"></div>
