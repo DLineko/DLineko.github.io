@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dlineko.github.io">
-  <title>Tag: 前端 | Yang&#39;s BLOG</title>
+  <title>五个实用的WEB API | Yang&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yang&#39;s BLOG">
-<meta property="og:url" content="https://dlineko.github.io/tags/%E5%89%8D%E7%AB%AF/index.html">
+  <meta name="description" content="Fullscreen API Clipboard Async API Resize Observer API Image Capture API Broadcast Channel API">
+<meta property="og:type" content="article">
+<meta property="og:title" content="五个实用的WEB API">
+<meta property="og:url" content="https://dlineko.github.io/post/281cbd2d.html">
 <meta property="og:site_name" content="Yang&#39;s BLOG">
+<meta property="og:description" content="Fullscreen API Clipboard Async API Resize Observer API Image Capture API Broadcast Channel API">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://dlineko.github.io/post/281cbd2d/1599112470994.png">
+<meta property="og:image" content="https://dlineko.github.io/post/281cbd2d/1599114657119.png">
+<meta property="og:image" content="https://dlineko.github.io/post/281cbd2d/1599122262248.png">
+<meta property="og:image" content="https://dlineko.github.io/post/281cbd2d/1599122972056.png">
+<meta property="og:image" content="https://dlineko.github.io/post/281cbd2d/1599124775576.png">
+<meta property="article:published_time" content="2020-09-03T15:44:43.000Z">
+<meta property="article:modified_time" content="2020-09-03T15:58:21.790Z">
 <meta property="article:author" content="machiko">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="WEB API">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dlineko.github.io/post/281cbd2d/1599112470994.png">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s BLOG" type="application/atom+xml">
   
@@ -170,36 +182,101 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-五个实用的WEB API" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/post/281cbd2d.html" class="archive-article-date">
-  	<time datetime="2020-09-03T15:44:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/post/281cbd2d.html">五个实用的WEB API</a>
+    <h1 class="article-title" itemprop="name">
+      五个实用的WEB API
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/post/281cbd2d.html" class="archive-article-date">
+  	<time datetime="2020-09-03T15:44:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Fullscreen API<br></li>
+<li>Clipboard Async API<br></li>
+<li>Resize Observer API<br></li>
+<li>Image Capture API<br></li>
+<li>Broadcast Channel API<br><a id="more"></a>
+
+</li>
+</ul>
+<h2 id="1-Fullscreen-API"><a href="#1-Fullscreen-API" class="headerlink" title="1.Fullscreen API"></a>1.Fullscreen API</h2><p>实现浏览器全屏效果</p>
+<img src="/post/281cbd2d/1599112470994.png" class="">
+<p>FireFox自动为该节点增加Css规则: width:100%;height:100%</p>
+<p>Chrome将该节点放在屏幕中央，保持原来大小，其余变黑。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:-webkit-full-screen</span> <span class="selector-id">#myvideo</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>语法：Element.requestFullscreen(options);</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> manageFullscreen = <span class="function"><span class="params">()</span> =&gt;</span> &#123;    <span class="built_in">document</span>.getElementById(<span class="string">'fs_id'</span>).requestFullscreen();</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Clipboard-Async-API"><a href="#2-Clipboard-Async-API" class="headerlink" title="2.Clipboard Async API"></a>2.Clipboard Async API</h2><p>实现剪切、复制和粘贴功能</p>
+<img src="/post/281cbd2d/1599114657119.png" class="">
+<p>以往使用<code>document.execCommand</code>操作剪切板，这种方法是同步操作，只能读取和写入DOM。Clipboard API是基于promise的API，旨在解决这个问题。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">performCopy</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">   event.preventDefault();</span><br><span class="line">   <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">await</span> navigator.clipboard.writeText(copyText);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;copyText&#125;</span> copied to clipboard`</span>);</span><br><span class="line">   &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(<span class="string">'Failed to copy: '</span>, err);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">performPaste</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">   event.preventDefault();</span><br><span class="line">   <span class="keyword">try</span> &#123;</span><br><span class="line">       <span class="keyword">const</span> text = <span class="keyword">await</span> navigator.clipboard.readText();</span><br><span class="line">       setPastetext(text);</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'Pasted content: '</span>, text);</span><br><span class="line">   &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(<span class="string">'Failed to read clipboard contents: '</span>, err);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Resize-Observer-API"><a href="#3-Resize-Observer-API" class="headerlink" title="3.Resize Observer API"></a>3.Resize Observer API</h2><p>检测DOM元素尺寸的变化</p>
+<img src="/post/281cbd2d/1599122262248.png" class="">
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> elWrapper = <span class="built_in">document</span>.querySelector(<span class="string">`.domWrapper`</span>)</span><br><span class="line"><span class="keyword">let</span> vm = <span class="keyword">this</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.hasOwnProperty(<span class="string">'ResizeObserver'</span>)) &#123;</span><br><span class="line">    <span class="keyword">const</span> resizeObserver = <span class="keyword">new</span> ResizeObserver(<span class="function"><span class="params">entries</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> eTarget = entries[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> (eTarget) &#123;</span><br><span class="line">            <span class="keyword">const</span> dimensions = entry.contentRect;</span><br><span class="line">            <span class="comment">// 实现代码</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    resizeObserver.observe(elWrapper)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-Image-Capture-API"><a href="#4-Image-Capture-API" class="headerlink" title="4.Image Capture API"></a>4.Image Capture API</h2><p>从视频设备（例如网络摄像头）捕获图像或抓取帧</p>
+<img src="/post/281cbd2d/1599122972056.png" class="">
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从设备中提取出mediaStream，再创建一个ImageCapture对象</span></span><br><span class="line">navigator.mediaDevices.getUserMedia(&#123;<span class="attr">video</span>: <span class="literal">true</span>&#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">mediaStream</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">document</span>.querySelector(<span class="string">'video'</span>).srcObject = mediaStream;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> track = mediaStream.getVideoTracks()[<span class="number">0</span>];</span><br><span class="line">    imageCapture = <span class="keyword">new</span> ImageCapture(track);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> <span class="built_in">console</span>.log(error));</span><br><span class="line"></span><br><span class="line"><span class="comment">//实现拍摄实时视频快照，返回imageBitmap</span></span><br><span class="line"> imageCapture.grabFrame()</span><br><span class="line">  .then(<span class="function"><span class="params">imageBitmap</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> canvas = <span class="built_in">document</span>.querySelector(<span class="string">'#grabFrameCanvas'</span>);</span><br><span class="line">    drawCanvas(canvas, imageBitmap);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> <span class="built_in">console</span>.log(error));</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取照片</span></span><br><span class="line"> imageCapture.takePhoto()</span><br><span class="line">  .then(<span class="function"><span class="params">blob</span> =&gt;</span> createImageBitmap(blob)) <span class="comment">//返回promise，裁剪图片（坑，很多浏览器不支持）</span></span><br><span class="line">  .then(<span class="function"><span class="params">imageBitmap</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> canvas = <span class="built_in">document</span>.querySelector(<span class="string">'#takePhotoCanvas'</span>);</span><br><span class="line">    drawCanvas(canvas, imageBitmap);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> <span class="built_in">console</span>.log(error));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawCanvas</span>(<span class="params">canvas, img</span>) </span>&#123;</span><br><span class="line">  canvas.width = getComputedStyle(canvas).width.split(<span class="string">'px'</span>)[<span class="number">0</span>];</span><br><span class="line">  canvas.height = getComputedStyle(canvas).height.split(<span class="string">'px'</span>)[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">let</span> ratio  = <span class="built_in">Math</span>.min(canvas.width / img.width, canvas.height / img.height);</span><br><span class="line">  <span class="keyword">let</span> x = (canvas.width - img.width * ratio) / <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">let</span> y = (canvas.height - img.height * ratio) / <span class="number">2</span>;</span><br><span class="line">  canvas.getContext(<span class="string">'2d'</span>).clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</span><br><span class="line">  canvas.getContext(<span class="string">'2d'</span>).drawImage(img, <span class="number">0</span>, <span class="number">0</span>, img.width, img.height,</span><br><span class="line">      x, y, img.width * ratio, img.height * ratio);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-Broadcast-Channel-API"><a href="#5-Broadcast-Channel-API" class="headerlink" title="5.Broadcast Channel API"></a>5.Broadcast Channel API</h2><p>允许<strong>同源</strong>的窗口，标签，iframe之间进行通信</p>
+<img src="/post/281cbd2d/1599124775576.png" class="">
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建广播频道</span></span><br><span class="line"> <span class="keyword">const</span> CHANNEL_NAME = <span class="string">"greenroots_channel"</span>;</span><br><span class="line"> <span class="keyword">const</span> bc = <span class="keyword">new</span> BroadcastChannel(CHANNEL_NAME);</span><br><span class="line"> <span class="keyword">const</span> message = <span class="string">'I am wonderful!'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// postMessage()发送消息</span></span><br><span class="line"><span class="keyword">const</span> sendMessage = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">   bc.postMessage(message);</span><br><span class="line">&#125;</span><br><span class="line"> <span class="keyword">const</span> CHANNEL_NAME = <span class="string">"greenroots_channel"</span>;</span><br><span class="line"> <span class="keyword">const</span> bc = <span class="keyword">new</span> BroadcastChannel(CHANNEL_NAME);</span><br><span class="line"></span><br><span class="line"><span class="comment">//接受信息</span></span><br><span class="line"> bc.addEventListener(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Received message, "<span class="subst">$&#123;event.data&#125;</span>", on the channel, "<span class="subst">$&#123;CHANNEL_NAME&#125;</span>"`</span>);</span><br><span class="line">    <span class="keyword">const</span> output = <span class="built_in">document</span>.getElementById(<span class="string">'msg'</span>);</span><br><span class="line">    output.innerText = event.data;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>参考文章</strong></p>
+<p><a href="https://blog.greenroots.info/10-lesser-known-web-apis-you-may-want-to-use-ckejv75cr012y70s158n85yhn" target="_blank" rel="noopener">10 lesser-known Web APIs you may want to use</a><br><a href="https://javascript.ruanyifeng.com/htmlapi/fullscreen.html#toc1" target="_blank" rel="noopener">Fullscreen API：全屏操作</a><br><a href="https://alligator.io/js/async-clipboard-api/" target="_blank" rel="noopener">Accessing the Clipboard in JavaScript Using the Async Clipboard API</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture" target="_blank" rel="noopener">ImageCapture API</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -215,106 +292,147 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://dlineko.github.io/post/281cbd2d.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/post/86dbddcb.html" class="archive-article-date">
-  	<time datetime="2020-06-09T15:45:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/post/8931d5c5.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法题：输入一颗二叉树的根节点和一个整数，打印出二叉树中结点值的和为输入整数的所有路径</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/post/86dbddcb.html">Vue源码系列一</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Vue源码</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Fullscreen-API"><span class="toc-number">1.</span> <span class="toc-text">1.Fullscreen API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Clipboard-Async-API"><span class="toc-number">2.</span> <span class="toc-text">2.Clipboard Async API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Resize-Observer-API"><span class="toc-number">3.</span> <span class="toc-text">3.Resize Observer API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Image-Capture-API"><span class="toc-number">4.</span> <span class="toc-text">4.Image Capture API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Broadcast-Channel-API"><span class="toc-number">5.</span> <span class="toc-text">5.Broadcast Channel API</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
+
+  
+
+  
+
+  
+
+  
+
+
+
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/post/b3a314df.html" class="archive-article-date">
-  	<time datetime="2020-05-29T16:14:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/post/b3a314df.html">ES6的Proxy和Reflect</a>
-    </h1>
-  
+        <section id="comments" class="comments">
+            <style>
+                .comments{margin:30px;padding:10px;background:#fff}
+                @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "ERMDKIiEyovJ1GonNEWUDdS6-gzGzoHsz",
+        app_key: "tW1js3s5U89xa0bIMlf2fHnS",
+        placeholder: "发表评论",
+        avatar: "mm",
+    });
+</script>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Vue源码衍生</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+        </section>
     
 
 
@@ -338,9 +456,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
